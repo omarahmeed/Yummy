@@ -1,0 +1,159 @@
+* {
+  cursor: pointer;
+}
+
+body {
+  background-color: #0d0d0d;
+}
+
+.side-bar {
+  z-index: 999999;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.outer-side {
+  width: 30%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.outer-side img {
+  width: 50px;
+}
+
+.inside-bar {
+  /* padding-top: 300px; */
+  width: 70%;
+  margin-top: 30px;
+  /* background-color: yellow; */
+
+  height: 200px;
+}
+
+.inside-bar a {
+  padding: 50px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+}
+
+.separate {
+  color: white;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100vh;
+}
+
+.icons {
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.meal {
+  overflow: hidden;
+}
+
+.meal-layer {
+  display: flex;
+
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6f6ca;
+  top: 100%;
+  transition: 0.5s;
+}
+
+.meal:hover .meal-layer {
+  top: 0;
+}
+
+.search input {
+  width: 40%;
+  margin: 20px;
+  margin-top: 30px;
+  color: white !important;
+}
+
+#searchbyname::placeholder {
+  color: rgba(255, 255, 255, 0.586);
+}
+
+#searchbyletter::placeholder {
+  color: rgba(255, 255, 255, 0.586);
+}
+
+
+/* 
+.deatils{
+
+    height: 100%;
+} */
+
+/* .form{
+    height: 100% !important;
+} */
+
+#submit{
+width: fit-content;
+    
+}
+#loadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.785);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #ff8000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+@media (max-width: 768px) {
+    .side-bar {
+      width: 100%;
+      left: -200%; /* Hide the sidebar off-screen initially on small screens */
+    }
+  
+    .side-bar.open {
+      left: 0;
+    }
+  }
